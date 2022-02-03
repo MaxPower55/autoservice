@@ -1,0 +1,118 @@
+:root {
+    --first-color: rgb(31, 29, 8);
+    --second-color: #94ae3f;
+    --third-color: rgb(235, 235, 235);
+    --fourth-color: #243754;
+    --fifth-color: #101321;
+
+    font-family: "Jura", sans-serif;
+}
+/* ОБЩАЯ РАЗМЕТКА СТРАНИЦЫ */
+html {
+    height: 100%;
+}
+.body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: url(img/bg_main_car.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-origin: border-box;
+    background-size: cover;
+}
+.header {
+    height: 250px;
+    background: linear-gradient(180deg, rgba(31,29,8,0.7), rgba(235,235,235,0));
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+.main {
+    flex: 1 1 auto;
+}
+.footer {
+    background-color: var(--fifth-color);
+}
+
+/* ДЕТАЛИЗИРОВАННАЯ РАЗМЕТКА HEADER */
+.header__logo {
+    width: 400px;
+    object-fit: cover;
+}
+.header__info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.header__name {
+    display: flex;
+    flex-direction: row;
+    gap: 4em;
+    padding-left: 5em;
+}
+.header__title {
+    font-family: 'Jura', sans-serif;
+    color: var(--third-color);
+    font-size: 3em;
+    text-transform: uppercase;
+    user-select: none;
+    align-self: center;
+}
+.header__descr {
+    font-family: 'Jura', sans-serif;
+    text-align: center;
+    margin: 0;
+    font-size: 7em;
+    text-transform: uppercase;
+    color: var(--third-color);
+    white-space: nowrap;
+    align-self: center;
+    user-select: none;
+}
+.header__dash {
+    width: 1px;
+    height: 6em;
+    background: var(--third-color);
+    align-self: center;
+}
+.header__nav {
+    flex: 1 1 auto;
+}
+.nav__list {
+    list-style: none;
+}
+.nav__list a {
+    color: var(--third-color);
+    text-decoration: none;
+}
+.nav__item {
+    display: inline-block;
+    width: 16%;
+    line-height: 4.5em;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transform: skewX(-15deg);
+    background-color: var(--fifth-color);
+    color: var(--third-color);
+    font-size: 1.2em;
+    white-space: nowrap;
+    transition: all .15s ease-out;
+}
+.nav__item-active {
+    background: var(--second-color);
+    transform: scale(1.1) skewX(-15deg) translateY(-4px);
+    z-index: 3;
+    box-shadow: 3px 3px 1px var(--third-color);
+    color: var(--fifth-color);
+}
+.nav__item:hover,
+.nav__item:active,
+.nav__item:focus {
+    background: #a5c246;
+    transform: scale(1.05) skewX(-15deg) translateY(-2px);
+    z-index: 2;
+    color: var(--fifth-color);
+}
