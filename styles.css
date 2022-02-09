@@ -256,13 +256,13 @@ html {
         margin: 0.4em;
     }
 }
-@media (max-width: 360px) {
+@media (max-width: 420px) {
     .main__title {
         font-size: 1.2em;
         text-align: justify;
     }
     .main__cards {
-        grid-template: repeat(6, 300px) / repeat(1, 340px);
+        grid-template: repeat(6, 300px) / repeat(1, 320px);
         gap: 15px;
     }
     .card__title {
