@@ -182,7 +182,7 @@ html {
         line-height: 2.4em;
     }
 }
-@media (max-width: 360px) {
+@media (max-width: 420px) {
     .header__title {
         font-size: 1.5em;
     }
@@ -401,7 +401,7 @@ html {
         letter-spacing: 2px;
     }
 }
-@media (max-width: 360px) {
+@media (max-width: 420px) {
     .footer__social {
         width: 350px;
         padding-left: 20px;
