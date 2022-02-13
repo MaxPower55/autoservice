@@ -1,7 +1,7 @@
 :root {
-    --first-color: rgb(31, 29, 8);
+    --first-color: #1f1d08;
     --second-color: #94ae3f;
-    --third-color: rgb(235, 235, 235);
+    --third-color: #ebebeb;
     --fourth-color: #243754;
     --fifth-color: #101321;
 }
@@ -23,7 +23,7 @@ html {
     background-origin: border-box;
     background-size: cover;
     background-attachment: fixed;
-    width: 1366px;
+    width: 1280px;
 }
 .header {
     background: linear-gradient(180deg, rgba(31,29,8,1), rgba(235,235,235,0));
@@ -32,30 +32,34 @@ html {
                          "logo menu  menu      menu";
     padding: 20px;
     margin: 0;
+    width: 100%;
 }
 .main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
-    margin-bottom: 100px;
+    margin: 50px 0 100px 0;
+    padding: 20px 10px;
 }
 .footer {
     background: linear-gradient(0deg, rgba(31,29,8,1), rgba(235,235,235,0));
     display: flex;
     flex-direction: row;
 }
-@media (max-width: 800px) {
+@media (max-width: 1280px) {
     .body {
         width: 800px;
     }
+}
+@media (max-width: 800px) {
+    .body {
+        width: 320px;
+    }
+    .header {
+        padding: 5px;
+    }
     .footer {
         flex-direction: column;
-    }
-}
-@media (max-width: 420px) {
-    .body {
-        width: 420px;
     }
 }
 
@@ -101,9 +105,8 @@ html {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 0.4em;
-    padding-left: 20px;
-    padding-right: 20px;
+    gap: 0.8em;
+    padding: 40px 20px 0;
 }
 .nav__item {
     width: 135px;
@@ -134,9 +137,9 @@ html {
 
 @media (max-width: 1280px) {
     .header {
-        grid-template-areas: "logo title "
-                             "logo name"
-                             "menu menu";
+        grid-template-areas: "logo title title"
+                             "logo name name"
+                             "menu menu menu";
     }
     .header__logo {
         width: 250px;
@@ -151,6 +154,11 @@ html {
     .header__name {
         font-size: 3em;
     }
+    .nav__item {
+        width: 17%;
+        line-height: 2.5em;
+    }
+    
 }
 @media (max-width: 800px) {
     .header {
@@ -180,22 +188,13 @@ html {
     }
     .header__nav {
         display: grid;
-        grid-template-columns: repeat(3,1fr);
-        row-gap: 0.5em;
-        column-gap: 0.3em;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 0.4em;
+        column-gap: 1em;
     }
     .nav__item {
-        width: 135px;
-        line-height: 2.4em;
-    }
-}
-@media (max-width: 420px) {
-    .header__title {
-        font-size: 1.5em;
-    }
-    .nav__item {
-        width: 90px;
-        font-size: 0.8em;
+        width: 100%;
+        line-height: 2em;
     }
 }
 
@@ -240,7 +239,7 @@ html {
         font-size: 1.5em;
     }
     .main__cards {
-        grid-template: repeat(3, 380px) / repeat(2, 400px);
+        grid-template: repeat(3, 380px) / repeat(2, 370px);
         gap: 30px;
     }
     .card__title {
@@ -251,19 +250,6 @@ html {
     }
 }    
 @media (max-width: 800px) {
-    .main__title {
-        font-size: 1.2em;
-        padding: 0 20px;
-    }
-    .main__cards {
-        grid-template: repeat(6, 300px) / repeat(1, 600px);
-        gap: 20px;
-    }
-    .card__title {
-        margin: 0.4em;
-    }
-}
-@media (max-width: 420px) {
     .main__title {
         font-size: 1.2em;
         text-align: justify;
@@ -278,7 +264,6 @@ html {
     .card__text {
         font-size: 0.8em;
     }
-
 }
 
 /* ДЕТАЛИЗИРОВАННАЯ РАЗМЕТКА FOOTER */
@@ -372,53 +357,15 @@ html {
 }
 @media (max-width: 800px) {
     .footer__social {
-        padding: 15px;
-        width: 600px;
-    }
-    .footer__tel {
-        width: 600px;
-    }
-    .footer__madein {
-        width: 600px;
-        font-size: 0.8em;
-        padding-right: 15px;
-    }
-    .social__text {
-        font-size: 0.8em;
-        display: inline;
-        margin: 0 20px 0 0;
-        line-height: 30px;
-    }
-    .social__icon {
-        justify-self: center;
-        align-self: center;
-    }
-    .tel__text {
-        font-size: 1em;
-        display: inline;
-        margin: 0 10px 0 0;
-    }
-    .tel__number {
-        color: var(--third-color);
-        display: inline-block;
-        font-weight: 600;
-        font-size: 1.6em;
-        text-decoration: none;
-        line-height: 2em;
-        letter-spacing: 2px;
-    }
-}
-@media (max-width: 420px) {
-    .footer__social {
-        width: 350px;
+        width: 320px;
         padding-left: 20px;
     }
     .footer__tel {
-        width: 350px;
+        width: 320px;
         padding-left: 20px;
     }
     .footer__madein {
-        width: 350px;
+        width: 320px;
     }
     .social__text {
         color: var(--third-color);
@@ -439,4 +386,98 @@ html {
         letter-spacing: 1.6px;
         text-align: left;
     }
+}
+
+/* СТИЛИ РАЗДЕЛА "ВИДЫ РАБОТ" */
+.works {
+    padding: 50px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+.works__article {
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+    color: var(--third-color);
+    border-radius: 5px;
+    margin: 20px;
+}
+.article__title {
+    padding-left: 20px;
+    font-size: 1.6rem;
+}
+.article__item {
+    width: 100%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    color: var(--first-color);
+}
+.item__img__block {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+.item__img {
+    border: 3px solid var(--third-color);
+    object-fit: cover;
+    width: 405px;
+    height: 300px;
+    cursor: pointer;
+}
+.item__img-fs {
+    position: fixed;
+    top: 0; left: 0;
+    width: 95vw;
+    height: 95vh;
+    margin: 2em;
+    border: 5px solid var(--third-color);
+    z-index: 10;
+    cursor: pointer;
+    object-fit: cover;
+}
+.item__descr {
+    font-size: 1.2em;
+    text-align: justify;
+}
+@media (max-width: 1280px) {
+    .works {
+        width: 800px;
+    }
+    .item__img__block {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .item__img {
+        width: 375px;
+        height: 235px;
+    }
+    .item__descr {
+        font-size: 0.9em;
+}
+@media (max-width: 800px) {
+    .works {
+        width: 320px;
+    }
+    .works__article {
+        margin: 5px;
+    }
+    .article__item {
+        padding: 10px;
+    }
+    .article__title {
+        padding-left: 20px;
+        font-size: 1.2rem;
+    }
+    .item__title {
+        font-size: 1rem;
+    }
+    .item__img__block {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .item__img {
+        width: 140px;
+        height: 80px;
+    }
+    .item__descr {
+        font-size: 0.9em;
 }
