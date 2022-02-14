@@ -425,17 +425,6 @@ html {
     height: 300px;
     cursor: pointer;
 }
-.item__img-fs {
-    position: fixed;
-    top: 0; left: 0;
-    width: 95vw;
-    height: 95vh;
-    margin: 2em;
-    border: 5px solid var(--third-color);
-    z-index: 10;
-    cursor: pointer;
-    object-fit: cover;
-}
 .item__descr {
     font-size: 1.2em;
     text-align: justify;
@@ -453,6 +442,7 @@ html {
     }
     .item__descr {
         font-size: 0.9em;
+    }
 }
 @media (max-width: 800px) {
     .works {
@@ -480,4 +470,37 @@ html {
     }
     .item__descr {
         font-size: 0.9em;
+    }
+}
+
+/* СТИЛИ ПОЛНОЭРАННОГО ПРОСМОТРА ФОТОГРАФИЙ */
+
+.image-full-screen-viewer {
+    position: fixed;
+    top: 0; bottom: 0; left: 0; right: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 10;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.image-source {
+    width: 95vw;
+    height: 95vh;
+    object-fit: contain;
+}
+.image-close {
+    position: absolute;
+    top: 3vh; right: 3vw;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    background: #101321;
+    width: 1.4em;
+    height: 1.4em;
+    border-radius: 50%;
+    border: 1px solid gray;
+    cursor: pointer;
 }
