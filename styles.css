@@ -504,3 +504,37 @@ html {
     border: 1px solid gray;
     cursor: pointer;
 }
+
+/* СТИЛИ ПРАЙС-ЛИСТА */
+
+.article__price {
+    background: rgba(0,0,0,0.8);
+    padding: 20px;
+}
+.article__header {
+    color: white;
+}
+.price {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.price__section {
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 70px;
+    gap: 0;
+}
+.section__item {
+    border-bottom: 1px dashed white;
+    line-height: 2em;
+}
+.item__price {
+    justify-self: right;
+    font-weight: bold;
+    line-height: 2em;
+}
+@media (max-width: 800px) {
+    .price {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
