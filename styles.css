@@ -227,11 +227,13 @@ html {
 .card__title {
     margin: 0.8em;
     font-size: 1.4em;
+    font-weight: normal;
 }
 .card__text {
     font-size: 1.2em;
     text-align: justify;
     margin: 0.5em;
+    font-weight: lighter;
 }
 
 @media (max-width: 1280px) {
@@ -554,3 +556,55 @@ details > summary {
     }
 }
 
+/* СТИЛИ ОТЗЫВОВ */
+
+.feedback__main {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2em;
+    padding: 2em;
+}
+.feedback__card {
+    background: rgba(0,0,0,0.8);
+    border-radius: 6px 0;
+    color: var(--third-color);
+    padding: 20px;
+}
+.feedback__card__photo {
+    width:100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+.feedback__name {
+    text-transform: capitalize;
+    display: block;
+    text-transform: bold;
+    font-size: 1.5em;
+    padding-left: 10px;
+    line-height: 2em;
+}
+.feedback__machine {
+    display: block;
+    text-transform: bold;
+    font-size: 1.2em;
+    padding-left: 10px;
+    line-height: 1.4em;
+}
+.feedback__card__text {
+    text-align: justify;
+}
+@media (max-width: 1280px) {
+    .feedback__main {
+        grid-template-columns: repeat(2,1fr);
+        gap: 1.5em;
+        padding: 1.5em;
+    }
+}
+@media (max-width: 800px) {
+    .feedback__main {
+        grid-template-columns: repeat(1,1fr);
+        gap: 0.5em;
+        padding: 0.5em;
+    }
+}
