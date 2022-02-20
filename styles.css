@@ -608,3 +608,18 @@ details > summary {
         padding: 0.5em;
     }
 }
+
+/* СТИЛИ ГДЕ МЫ */
+
+.map__main {
+    width: 100%;
+    padding: 10px;
+}
+.map {
+    height: calc(100vh - 238px - 125px - 20px);
+}
+@media (max-width: 1280px) {
+    .map {
+        height: calc(100vh - 272px - 102px - 20px);
+    }
+}
